@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginTop="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/gunung" />
+
+            <TextView
+                android:id="@+id/tittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="30dp"
+                android:text="Kemenko PMK Lakukan Monitoring dan Evaluasi Indeks Pembangunan Keluarga di Aceh"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="30dp"
+                android:text="KEMENKO PMK -- Kementerian Koordinator Bidang Pembangunan Manusia dan Kebudayaan (Kemenko PMK) dalam hal ini Asisten Deputi Ketahanan dan Kesejahteraan Keluarga melakukan kunjungan ke Kampung Keluarga Berkualitas di Desa (Gampong) Meunasah Mon Cut, Kecamatan Lhoknga, Kabupaten Aceh Besar pada Kamis (31/08/2023). Kunjungan ini dilakukan untuk memastikan pelaksanaan ketahanan dan Kesejahteraan Keluarga melalui indeks Pembangunan Keluarga (iBangga) berjalan dengan baik.
+
+Pada kunjungan tersebut, tim Kemenko PMK melihat Rumah Data di Kampung Keluarga Berkualitas yang difungsikan sebagai pusat data dan informasi kependudukan dan keluarga yang meliputi data keluarga dan peta keluarga secara Spasial dengan status kesejahteraan dan kesehatan, Pojok Edukasi Kependudukan untuk Masyarakat, Pojok Stunting, perpustakaan serta data inventarisasi fasilitas pendidikan, kesehatan, ibadah dan sarana prasarana. Hadirnya rumah data ini dapat menjadi salah satu upaya yang dapat mendukung peningkatan indeks pembangunan keluarga di desa ini.
+
+Diskusi dilakukan bersama Perwakilan BKKBN Prov.Aceh, Kepala Dinas Pengendalian Penduduk, Keluarga Berencana, Pemberdayaan Perempuan dan Perlindungan Anak, Kepala Desa (Keuchik dalam bahasa Aceh), Perangkat Desa dan Kader Kampung Keluarga Berkualitas, ibu-ibu PKK dan Kelompok Usaha Peningkatan Pendapatan Keluarga Akseptor (UPPKA).
+
+Asisten Deputi Ketahanan dan Kesejahteraan keluarga Kemenko PMK Mustikorini indrijatiningrum mengatakan bahwa pembangunan keluarga harus dilaksanakan dengan terpadu dan terintegrasi. Penggunaan dana desa dapat digunakan seoptimal mungkin untuk kebutuhan Desa. Hal tersebut merupakan salah satu upaya yang dapat dilakukan oleh Desa dalam meningkatkan indeks pembangunan keluarga. Indri mengharapkan dukungan Kepala Desa dan juga komponen warga dalam mewujudkan hal ini melalui berbagai inovasi.
+
+“Secara kebijakan Dana Desa sudah bagus di level pemerintah pusat. Yang perlu kita tingkatkan adalah inovasi dan kreativitas pelaksanaan di daerah. Karena sebenarnya kalau kita bicara potensi desa ini sungguh luar biasa. Misalnya untuk pertanian, perikanan dan peternakan. Hal tersebut jika terintegrasi dengan baik, maka dapat sebagai sumber pangan yang dapat meningkatkan ekonomi keluarga dan juga daerah,” ujar Indri.
+
+Kepala Dinas Pengendalian Penduduk dan Keluarga Berencana, Pemberdayaan Perempuan dan Perlindungan Anak, Kabupaten Aceh Besar, Drs.Fadhlan mengatakan bahwa selama ini pihaknya telah melakukan sinergitas lintas sektor dalam meningkatkan capaian ibangga di Aceh Besar mulai dari Posyandu hingga pengembangan pangan lokal.
+
+“Mengembangkan program dan kegiatan yang berkontribusi terhadap perbaikan atau peningkatan pencapaian indikator-indikator yang terdapat di IBangga, misalnya  mengalokasikan untuk kegiatan posyandu seperti pemberian makanan tambahan dan juga kegiatan pengembangan pangan lokal” ujar Fadhlan.
+  "
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tittle"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:text="Selanjutnya"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/content"
+                app:cornerRadius="20dp"
+                android:layout_marginBottom="15dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_prev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:text="Sebelumnya"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/content"
+                app:cornerRadius="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
