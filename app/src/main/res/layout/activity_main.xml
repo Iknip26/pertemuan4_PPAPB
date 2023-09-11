@@ -30,15 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.45"
-                />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/mid_line"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintGuide_end="360dp"
                 />
 
             <androidx.constraintlayout.widget.Guideline
@@ -69,24 +61,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Calculator App"
-                android:layout_gravity="center_horizontal"
                 android:textSize="32dp"
                 android:fontFamily="sans-serif-medium"
                 app:layout_constraintStart_toStartOf="@id/card"
                 app:layout_constraintEnd_toEndOf="@id/card"
                 app:layout_constraintTop_toTopOf="@id/card"
                 android:layout_marginTop="30dp"
-                tools:ignore="MissingConstraints" />
+                />
 
             <TextView
                 android:id="@+id/teks1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="500 x 120"
-                app:layout_constraintStart_toStartOf="@id/mid_line"
+                app:layout_constraintEnd_toStartOf="@id/separate_right"
                 app:layout_constraintBottom_toBottomOf="@id/separate_up"
                 android:layout_marginBottom="70dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginRight="40dp"
                 android:textSize="22dp"
                 android:textColor="@color/black"
                 />
@@ -100,7 +91,6 @@
                 android:textSize="40dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:layout_marginTop="-5dp"
                 android:fontFamily="sans-serif-medium"
                 />
 
@@ -111,7 +101,7 @@
                 app:layout_constraintStart_toStartOf="@id/separate_left"
                 app:layout_constraintEnd_toEndOf="@id/separate_right"
                 app:layout_constraintBottom_toTopOf="@id/separate_up"
-                android:layout_marginHorizontal="15dp"
+                android:layout_marginHorizontal="20dp"
                 />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -125,7 +115,7 @@
                 >
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/V_1_line"
+                    android:id="@+id/H_1_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -133,36 +123,37 @@
                     />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/V_2_line"
+                    android:id="@+id/H_2_line"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="0.25"/>
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/V_3_line"
+                    android:id="@+id/H_3_line"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="0.5"/>
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/V_4_line"
+                    android:id="@+id/H_4_line"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="0.75"/>
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/V_5_line"
+                    android:id="@+id/H_5_line"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="1"/>
+                    app:layout_constraintGuide_percent="1"
+                    />
 
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/H_1_line"
+                    android:id="@+id/V_1_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -170,7 +161,7 @@
                     />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/H_2_line"
+                    android:id="@+id/V_2_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -178,7 +169,7 @@
                     />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/H_3_line"
+                    android:id="@+id/V_3_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -186,7 +177,7 @@
                     />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/H_4_line"
+                    android:id="@+id/V_4_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -194,22 +185,23 @@
                     />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/H_5_line"
+                    android:id="@+id/V_5_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintGuide_percent="1"
                     />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
+                    android:shadowRadius="5"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_1_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_2_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_1_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_2_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_1_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_2_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_1_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_2_line"
                     android:text="7"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"
@@ -221,10 +213,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_2_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_3_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_1_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_2_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_2_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_3_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_1_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_2_line"
                     android:text="8"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -234,10 +226,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_3_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_4_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_1_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_2_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_3_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_4_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_1_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_2_line"
                     android:text="9"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -247,26 +239,26 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_4_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_5_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_1_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_2_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_4_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_5_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_1_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_2_line"
                     android:text="+"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
 
 
 
-<!--                LAYER 2-->
+                <!--                LAYER 2-->
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_1_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_2_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_2_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_3_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_1_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_2_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_2_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_3_line"
                     android:text="4"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -276,10 +268,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_2_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_3_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_2_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_3_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_2_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_3_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_2_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_3_line"
                     android:text="5"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -289,10 +281,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_3_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_4_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_2_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_3_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_3_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_4_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_2_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_3_line"
                     android:text="6"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -302,26 +294,26 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_4_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_5_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_2_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_3_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_4_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_5_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_2_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_3_line"
                     android:text="-"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
 
 
 
-<!--                LAYER 3 -->
+                <!--                LAYER 3 -->
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_1_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_2_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_3_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_4_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_1_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_2_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_3_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_4_line"
                     android:text="1"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -331,10 +323,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_2_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_3_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_3_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_4_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_2_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_3_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_3_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_4_line"
                     android:text="2"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -344,10 +336,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_3_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_4_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_3_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_4_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_3_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_4_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_3_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_4_line"
                     android:text="3"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -357,26 +349,26 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_4_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_5_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_3_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_4_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_4_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_5_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_3_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_4_line"
                     android:text="/"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
 
 
 
-<!--                LAYER 4-->
+                <!--                LAYER 4-->
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_1_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_3_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_4_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_5_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_1_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_3_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_4_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_5_line"
                     android:text="0"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -386,10 +378,10 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_3_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_4_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_4_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_5_line"
+                    app:layout_constraintStart_toStartOf="@+id/V_3_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_4_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_4_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_5_line"
                     android:text="x"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
@@ -399,11 +391,11 @@
                     android:layout_height="0dp"
                     android:background="@drawable/button"
                     android:layout_margin="7dp"
-                    app:layout_constraintStart_toStartOf="@+id/H_1_line"
-                    app:layout_constraintEnd_toEndOf="@+id/H_3_line"
-                    app:layout_constraintTop_toTopOf="@+id/V_4_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/V_5_line"
-                    android:text="0"
+                    app:layout_constraintStart_toStartOf="@+id/V_4_line"
+                    app:layout_constraintEnd_toEndOf="@+id/V_5_line"
+                    app:layout_constraintTop_toTopOf="@+id/H_4_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/H_5_line"
+                    android:text="="
                     android:fontFamily="sans-serif-medium"
                     android:textSize="30dp"/>
 
